@@ -1,10 +1,9 @@
-// backend/config/db.js
-const mysql = require("mysql2");
+import mysql from "mysql2";
 
 const db = mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: "password@7749", // your MySQL password if set
+  password: "your_mysql_password", // 🔹 replace with your actual MySQL password
   database: "school_portal",
 });
 
@@ -16,4 +15,4 @@ db.connect((err) => {
   }
 });
 
-module.exports = db;
+export default db;
